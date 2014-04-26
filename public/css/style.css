@@ -1,0 +1,85 @@
+body{
+	padding: 0;
+	margin: 0;
+	padding-bottom: 40px;
+	padding-right: 200px;
+	background: #444;
+	color: #fff;
+	font-family: 'Roboto', 'sans-serif';
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.messages, .people{
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+.message{
+	padding: 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #666;
+}
+.message-info{
+	float: right;
+}
+
+.users{
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 40px;
+
+	width: 200px;
+	border-left: 1px solid #aaa;
+}
+
+.controls{
+	position: fixed;
+	width: 100%;
+	background: #f00;
+	bottom: 0;
+	height: 40px;
+	display: table;
+	border-top: 1px solid #aaa;
+}
+
+.controls .message-input, .controls .message-send{
+	display: table-cell;
+	margin: 0;
+
+}
+
+.controls .message-input{
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	float: left;
+	height: 40px;
+	border: 0;
+	padding: 5px 10px;
+	background: #444;
+	color: #fff;
+}
+
+.controls .message-input:focus{
+	outline: 0;
+}
+
+.controls .message-send{
+	width: 1%;
+	white-space: nowrap;
+	vertical-align: middle;
+
+}
+
+.controls .message-send button{
+	border: 0;
+	height: 40px;
+	padding: 5px 10px;
+	margin: 0;
+}

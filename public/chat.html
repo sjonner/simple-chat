@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/angular/angular.js"></script>
+        <script src="/moment/min/moment-with-langs.js"></script>
+        <script src="/js/chat.js"></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div ng-controller="ChatController">
+            <div class="users">
+                <ul ng-repeat="user in users">
+                    <li>{{user}}</li>
+                </ul>
+            </div>
+            <div class="messages">
+                <div ng-repeat="message in messages">
+                    <div id="" class="message">
+                        <div class="message-info">
+                            <strong>{{message.nickname}}</strong> at {{message.date}}
+                        </div>
+                        {{message.content}}
+                    </div>
+                </div>
+                <div id="latest"></div>
+            </div>
+            <div class="controls">
+                <input class="message-input" type="text" ng-model="newmessage" ng-keypress="enter($event)">
+                <span class="message-send">
+                    <button ng-click="send()">Send</button>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
