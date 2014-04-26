@@ -1,4 +1,7 @@
-support-chat
+simple-chat
 ============
 
-A support chat system
+A simple chat client using:
+* nodejs
+* angularjs
+* mongodb
